@@ -18218,8 +18218,8 @@ angular.module('mm.addons.mod_glossary', ['mm.core'])
     .state('site.mod_glossary', {
       url: '/mod_glossary',
       params: {
-        module: null,
-        courseid: null
+        module: {"id":14,"url":"http://moodle.nephilaweb.com.ph/mod/glossary/view.php?id=14","name":"Drug Information","instance":1,"visible":1,"modicon":"http://moodle.nephilaweb.com.ph/theme/image.php/boost/glossary/1485906962/icon","modname":"glossary","modplural":"Glossaries","availability":null,"indent":0,"completionstatus":{"cmid":14,"modname":"glossary","instance":1,"state":0,"timecompleted":0,"tracking":1}},
+        courseid: 3
       },
       views: {
         'site': {
