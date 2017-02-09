@@ -47687,9 +47687,9 @@ angular.module('mm.addons.mod_wiki')
 angular.module('mm.core')
 
 .constant('mmCoreConfigConstants', {
-    "app_id" : "com.moodle.moodlemobile",
-    "appname": "Moodle Mobile",
-    "versioncode" : "2016",
+    "app_id" : "com.zuellig.mobile",
+    "appname": "Zuellig Mobile",
+    "versioncode" : "2017",
     "versionname" : "3.2.0",
     "cache_expiration_time" : 300000,
     "default_lang" : "en",

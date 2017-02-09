@@ -177,7 +177,7 @@
     "mm.login.selectacountry": "اختر دولة",
     "mm.login.siteaddress": "عنوان الموقع",
     "mm.login.siteurl": "رابط الموقع",
-    "mm.login.siteurlrequired": "رابط الموقع مطلوب ..مثل  <i>http://moodle.nephilaweb.com.ph</i>",
+    "mm.login.siteurlrequired": "رابط الموقع مطلوب ..مثل  <i>http://www.yourmoodlesite.abc أو https://www.yourmoodlesite.efg</i>",
     "mm.login.startsignup": "إنشاء اشتراك جديد",
     "mm.login.supplyinfo": "الرجاء إدخال تفاصيل أكثر",
     "mm.login.username": "اسم المستخدم",
