@@ -8389,7 +8389,7 @@ a.button {
   bottom: 0; }
 
 .mm-logo {
-  background-image: url('../img/zphar_spash.png');
+  background-image: url('../img/zphar.png');
   /* Change logo here */
   background-repeat: no-repeat;
   background-position: center center;
