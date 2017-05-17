@@ -2,7 +2,7 @@
 
     <ion-side-menu-content>
 
-                <a class="button button-icon icon ion-navicon" aria-label="{{ 'mm.sidemenu.togglemenu' | translate }}"></a>
+                <a ui-sref="site.mm_settings" class="button button-icon icon ion-navicon" aria-label="{{ 'mm.sidemenu.togglemenu' | translate }}"></a>
             </ion-nav-buttons>
         </ion-nav-bar>
 
@@ -25,11 +25,6 @@
         <ion-content class="has-side-menu-header mm-sidemenu-menu">
             <nav>
                 <ul class="list dark">
-                    <li class="mm-mycourses-handler">
-                        <a menu-close class="item item-icon-left" ui-sref="site.mod_glossary" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
-                            <i class="icon ion-ios-book"></i>Product Library
-                        </a>
-                    </li>
                     <li class="mm-mycourses-handler">
                         <a menu-close class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
                             <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
