@@ -2,11 +2,7 @@
 
     <ion-side-menu-content>
 
-        <ion-nav-bar class="bar-content">
-            <ion-nav-back-button>
-            </ion-nav-back-button>
-            <ion-nav-buttons side="left">
-                <button menu-toggle="left" class="button button-icon icon ion-navicon" aria-label="{{ 'mm.sidemenu.togglemenu' | translate }}"></button>
+                <a class="button button-icon icon ion-navicon" aria-label="{{ 'mm.sidemenu.togglemenu' | translate }}"></a>
             </ion-nav-buttons>
         </ion-nav-bar>
 
@@ -49,12 +45,12 @@
                         </a>
                     </li>
                     <li>
-                        <a menu-close class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
+                        <a class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
                             <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
                         </a>
                     </li>
                     <li>
-                        <a menu-close class="item item-icon-left" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
+                        <a class="item item-icon-left" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
                             <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
                         </a>
                     </li>
