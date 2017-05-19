@@ -4,7 +4,7 @@
 
         <ion-nav-bar class="bar-content">
             <ion-nav-buttons side="left">
-                <a class="button button-icon icon ion-navicon" aria-label="{{ 'mm.sidemenu.togglemenu' | translate }}"></a>
+                <a class="button button-icon icon ion-navicon" ui-sref="site.mm_settings"></a>
             </ion-nav-buttons>
         </ion-nav-bar>
 
