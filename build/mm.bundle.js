@@ -9905,15 +9905,6 @@ angular.module('mm.core.sidemenu', [])
     });
 }])
 
-    .state('site.mm_menupage', {
-        url: '/mm_menupage',
-        views: {
-            'site': {
-                templateUrl: 'core/components/sidemenu/templates/sidemenu.html',
-                controller: 'mmCoursesListCtrl'
-            }
-        }
-    })
 
 .run(["$mmEvents", "mmCoreEventLogin", "mmCoreEventSiteUpdated", "mmCoreEventLogout", "$mmSideMenuDelegate", "mmCoreEventRemoteAddonsLoaded", function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, mmCoreEventLogout, $mmSideMenuDelegate,
             mmCoreEventRemoteAddonsLoaded) {
