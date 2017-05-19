@@ -9907,7 +9907,7 @@ angular.module('mm.core.sidemenu', [])
         url: '/mm_menupage',
         views: {
             'site': {
-                templateUrl: 'core/components/courses/templates/list.html',
+                templateUrl: 'core/components/sidemenu/templates/menupage.html',
                 controller: 'mmCoursesListCtrl'
             }
         }
