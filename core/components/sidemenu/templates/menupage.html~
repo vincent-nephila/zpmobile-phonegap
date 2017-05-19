@@ -1,45 +1,62 @@
-<ion-view view-title="{{ 'mm.courses.mycourses' | translate }}">
-    <ion-nav-buttons side="secondary">
-        <a ui-sref="site.mm_searchcourses" ng-if="searchEnabled" class="button button-icon ion-ios-search-strong"></a>
-    </ion-nav-buttons>
-    <ion-content padding="true" mm-state-class>
-        <!-- ion-refresher needs to be direct child of ion-content to work with native scrolling -->
-        <ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="coursesLoaded" on-refresh="refreshCourses()">
-        </ion-refresher>
-        <mm-loading hide-until="coursesLoaded">
-            <div class="list" ng-if="courses && courses.length > 5">
-                <ion-input class="item item-input">
-                    <i class="icon ion-funnel placeholder-icon"></i>
-                    <input type="text" placeholder="{{ 'mm.courses.filtermycourses' | translate}}" ng-model="filter.filterText">
-                </ion-input>
-            </div>
-            <section ng-repeat="course in courses | filter:{fullname: filter.filterText}" class="list card">
-                <a class="item item-icon-right" ui-sref="site.mm_course({courseid: course.id, coursefullname: course.fullname})" title="{{course.fullname}}">
-                    <h2><mm-format-text watch="true">{{course.fullname}}</mm-format-text></h2>
-                    <i class="icon icon-accessory ion-chevron-right"></i>
+<ion-view hide-nav-bar="true" hide-back-button="true">
+        <header>
+            <div class="bar bar-header bar-side-menu">
+                <a mm-user-link userid="{{siteinfo.userid}}" class="item item-avatar item-icon-right full-image">
+                    <img ng-src="{{siteinfo.userpictureurl}}" alt="{{ 'mm.core.pictureof' | translate:{$a: siteinfo.fullname} }}" role="presentation" mm-external-content>
+                    <h2>{{siteinfo.fullname}}</h2>
+                    <p><mm-format-text watch="true">{{siteinfo.sitename}}</mm-format-text></p>
+                    <i class="icon ion-ios-arrow-right"></i>
                 </a>
-                <div class="item item-text-wrap" ng-show="course.summary">
-                    <p>
-                        <summary>
-                            <mm-format-text class="mm-content-with-float" watch="true" shorten="40%" expand-on-click="true">{{course.summary}}</mm-format-text>
-                        </summary>
-                    </p>
-                </div>
-                <div class="item mm-course-handlers" ng-show="(course._handlers && course._handlers.length) || !areNavHandlersLoadedFor(course.id)">
-                    <div class="item tabs tabs-icon-top" ng-show="course._handlers && course._handlers.length">
-                        <a ng-repeat="handler in course._handlers | orderBy:'-priority'" ng-controller="handler.controller" ng-click="action($event, course)" class="tab-item active mm-courses-handler {{class}}" title="{{title | translate}}">
-                            <i class="icon {{icon}}"></i> {{title | translate}}
-                        </a>
-                    </div>
-                    <div class="mm-loading-course-handlers text-center" ng-if="!course._handlers || !course._handlers.length">
-                        <ion-spinner></ion-spinner>
-                    </div>
-                </div>
-            </section>
-            <div ng-if="!courses || !courses.length">
-                <p>{{ 'mm.courses.nocourses' | translate }}</p>
-                <p ng-if="searchEnabled">{{ 'mm.courses.searchcoursesadvice' | translate }}</p>
             </div>
-        </mm-loading>
+        </header>
+    <ion-content padding="true" mm-state-class>
+    	<div>
+       <ul class="list dark">
+           <li ng-if="showMyCourses" class="mm-mycourses-handler">
+               <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
+                   <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
+               </a>
+           </li>
+           <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
+               <ion-spinner></ion-spinner>
+           </li>
+           <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler {{class}}">
+               <a class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}" ng-class="{'item-icon-right': loading}">
+                   <i class="icon {{icon}}"></i> {{title | translate}}
+                   <span ng-show="!loading && badge" class="badge badge-positive">{{badge}}</span>
+                   <ion-spinner ng-if="loading" class="icon"></ion-spinner>
+               </a>
+           </li>
+           <li ng-repeat="item in customItems" class="mm-sidemenu-customitem">
+               <a ng-if="item.type != 'embedded'" class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" title="{{item.label}}">
+                   <i class="icon {{item.icon}}"></i>{{item.label}}
+               </a>
+               <a ng-if="item.type == 'embedded'" class="item item-icon-left" ui-sref="site.iframe-view({title: item.label, url: item.url})" title="{{item.label}}">
+                   <i class="icon {{item.icon}}"></i>{{item.label}}
+               </a>
+           </li>
+           <li ng-if="showWeb">
+               <a class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
+                   <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
+               </a>
+           </li>
+           <li ng-if="showHelp">
+               <a class="item item-icon-left" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
+                   <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
+               </a>
+           </li>
+           <li class="item item-divider"></li>
+           <li>
+               <a class="item item-icon-left" ui-sref="site.mm_settings" title="{{ 'mm.sidemenu.appsettings' | translate}}">
+                   <i class="icon ion-gear-b"></i>{{ 'mm.sidemenu.appsettings' | translate}}
+               </a>
+           </li>
+           <li>
+               <a class="item item-icon-left" ng-click="logout()" title="{{ 'mm.sidemenu.changesite' | translate}}">
+                   <i class="icon ion-log-out"></i>{{ logoutLabel | translate}}
+               </a>
+           </li>
+       </ul>
+       </div>
     </ion-content>
 </ion-view>

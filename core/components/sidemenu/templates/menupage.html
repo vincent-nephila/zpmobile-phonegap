@@ -1,4 +1,4 @@
-<ion-view view-title="{{ 'mm.courses.mycourses' | translate }}">
+<ion-view hide-nav-bar="true" hide-back-button="true">
         <header>
             <div class="bar bar-header bar-side-menu">
                 <a mm-user-link userid="{{siteinfo.userid}}" class="item item-avatar item-icon-right full-image">
@@ -10,6 +10,7 @@
             </div>
         </header>
     <ion-content padding="true" mm-state-class>
+    	<div>
        <ul class="list dark">
            <li ng-if="showMyCourses" class="mm-mycourses-handler">
                <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
@@ -56,5 +57,6 @@
                </a>
            </li>
        </ul>
+       </div>
     </ion-content>
 </ion-view>

@@ -9451,6 +9451,7 @@ angular.module('mm.core.courses', [])
 .constant('mmCoursesAccessMethods', {
      guest: 'guest',
      default: 'default'
+     
 })
 .config(["$stateProvider", function($stateProvider) {
     $stateProvider
@@ -9907,8 +9908,7 @@ angular.module('mm.core.sidemenu', [])
         url: '/mm_menupage',
         views: {
             'site': {
-                templateUrl: 'core/components/sidemenu/templates/menupage.html',
-                controller: 'mmCoursesListCtrl'
+                templateUrl: 'core/components/sidemenu/templates/menupage.html'
             }
         }
     });
@@ -12556,7 +12556,7 @@ angular.module('mm.core.courses')
 .controller('mmCoursesListCtrl', ["$scope", "$mmCourses", "$mmCoursesDelegate", "$mmUtil", "$mmEvents", "$mmSite", "$q", "mmCoursesEventMyCoursesUpdated", "mmCoursesEventMyCoursesRefreshed", function($scope, $mmCourses, $mmCoursesDelegate, $mmUtil, $mmEvents, $mmSite, $q,
             mmCoursesEventMyCoursesUpdated, mmCoursesEventMyCoursesRefreshed) {
     $scope.searchEnabled = $mmCourses.isSearchCoursesAvailable();
-    $scope.areNavHandlersLoadedFor = $mmCoursesDelegate.areNavHandlersLoadedFor;
+    //$scope.areNavHandlersLoadedFor = $mmCoursesDelegate.areNavHandlersLoadedFor;
     $scope.filter = {};
     function fetchCourses(refresh) {
         return $mmCourses.getUserCourses().then(function(courses) {
