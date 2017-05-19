@@ -9902,7 +9902,16 @@ angular.module('mm.core.sidemenu', [])
                 $state.go('mm_login.init');
             }
         }]
-    });
+    })
+    .state('site.mm_menu', {
+        url: '/mm_menu',
+        views: {
+            'site': {
+                templateUrl: 'core/components/sidemenu/templates/menupage.html'
+            }
+        }
+    })
+    ;
 }])
 .run(["$mmEvents", "mmCoreEventLogin", "mmCoreEventSiteUpdated", "mmCoreEventLogout", "$mmSideMenuDelegate", "mmCoreEventRemoteAddonsLoaded", function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, mmCoreEventLogout, $mmSideMenuDelegate,
             mmCoreEventRemoteAddonsLoaded) {
@@ -9911,6 +9920,8 @@ angular.module('mm.core.sidemenu', [])
     $mmEvents.on(mmCoreEventRemoteAddonsLoaded, $mmSideMenuDelegate.updateNavHandlers);
     $mmEvents.on(mmCoreEventLogout, $mmSideMenuDelegate.clearSiteHandlers);
 }]);
+
+
 
 angular.module('mm.core.textviewer', [])
 .config(["$stateProvider", function($stateProvider) {
