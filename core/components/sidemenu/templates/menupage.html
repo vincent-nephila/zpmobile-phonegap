@@ -12,29 +12,26 @@
             </div>
         </header>
         <ion-content class="has-side-menu-header">
-				<ion-grid>
-				  <ion-row>
-				    <ion-col col-4>
-                  <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
-                      <i class="icon ion-ionic"></i>
-                      {{ 'mm.sidemenu.mycourses' | translate}}
-                  </a>
-				    </ion-col>
-					 <ion-col col-4>
-                  <a class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}" ng-class="{'item-icon-right': loading}">
-                      <i class="icon {{icon}}"></i> {{title | translate}}
-                      <span ng-show="!loading && badge" class="badge badge-positive">{{badge}}</span>
-                      <ion-spinner ng-if="loading" class="icon"></ion-spinner>
-                  </a>
-                  asasa
-					 </ion-col>
-					 <ion-col col-4>
-                  <a ng-if="item.type != 'embedded'" class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" title="{{item.label}}">
-                      <i class="icon {{item.icon}}"></i>{{item.label}}
-                  </a>
-                  asasas
-					 </ion-col>
-				  </ion-row>
-				</ion-grid>
+			  <ion-grid>
+			    <ion-row>
+			      <ion-col>
+			        <div>1 of 2</div>
+			      </ion-col>
+			      <ion-col>
+			        <div>2 of 2</div>
+			      </ion-col>
+			    </ion-row>
+			    <ion-row>
+			      <ion-col>
+			        <div>1 of 3</div>
+			      </ion-col>
+			      <ion-col>
+			        <div>2 of 3</div>
+			      </ion-col>
+			      <ion-col>
+			        <div>3 of 3</div>
+			      </ion-col>
+			    </ion-row>
+			  </ion-grid>
         </ion-content>
     </ion-view>
