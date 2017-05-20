@@ -20,12 +20,20 @@
                </a>
 			   </div>
 			   <div class = "col">
-					<a ng-if="item.type != 'embedded'" class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" title="{{item.label}}">
-                   <i class="icon {{item.icon}}"></i>
-                   {{item.label}}
+               <a class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}" ng-class="{'item-icon-right': loading}">
+                   <i class="icon {{icon}}"></i> {{title | translate}}
+                   <span ng-show="!loading && badge" class="badge badge-positive">{{badge}}</span>
+                   <ion-spinner ng-if="loading" class="icon"></ion-spinner>
+               </a>			   
+			   </div>
+			   <div class = "col">
+               <a ng-if="item.type != 'embedded'" class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" title="{{item.label}}">
+                   <i class="icon {{item.icon}}"></i>{{item.label}}
+               </a>
+               <a ng-if="item.type == 'embedded'" class="item item-icon-left" ui-sref="site.iframe-view({title: item.label, url: item.url})" title="{{item.label}}">
+                   <i class="icon {{item.icon}}"></i>{{item.label}}
                </a>
 			   </div>
-			   <div class = "col">col 3</div>
 			</div>
 			<div class = "row">
 			   <div class = "col">col 12</div>
