@@ -12556,7 +12556,7 @@ angular.module('mm.core.courses')
 .controller('mmCoursesListCtrl', ["$scope", "$mmCourses", "$mmCoursesDelegate", "$mmUtil", "$mmEvents", "$mmSite", "$q", "mmCoursesEventMyCoursesUpdated", "mmCoursesEventMyCoursesRefreshed", function($scope, $mmCourses, $mmCoursesDelegate, $mmUtil, $mmEvents, $mmSite, $q,
             mmCoursesEventMyCoursesUpdated, mmCoursesEventMyCoursesRefreshed) {
     $scope.searchEnabled = $mmCourses.isSearchCoursesAvailable();
-    //$scope.areNavHandlersLoadedFor = $mmCoursesDelegate.areNavHandlersLoadedFor;
+    $scope.areNavHandlersLoadedFor = $mmCoursesDelegate.areNavHandlersLoadedFor;
     $scope.filter = {};
     function fetchCourses(refresh) {
         return $mmCourses.getUserCourses().then(function(courses) {
