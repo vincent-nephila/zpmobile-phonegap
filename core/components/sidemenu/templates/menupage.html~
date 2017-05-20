@@ -20,31 +20,32 @@
                       {{ 'mm.sidemenu.mycourses' | translate}}
                   </a>
 				    </ion-col>
-					 <ion-col col-4>This column will take 12 columns</ion-col>
-					 <ion-col col-4>This column will take 12 columns</ion-col>
+					 <ion-col col-4>
+                  <a class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}" ng-class="{'item-icon-right': loading}">
+                      <i class="icon {{icon}}"></i> {{title | translate}}
+                      <span ng-show="!loading && badge" class="badge badge-positive">{{badge}}</span>
+                      <ion-spinner ng-if="loading" class="icon"></ion-spinner>
+                  </a>
+					 </ion-col>
+					 <ion-col col-4>
+                  <a ng-if="item.type != 'embedded'" class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" title="{{item.label}}">
+                      <i class="icon {{item.icon}}"></i>{{item.label}}
+                  </a>
+					 </ion-col>
 				  </ion-row>
 				  <ion-row>
 				    <ion-col col-6>This column will take 6 columns</ion-col>
 				  </ion-row>
 				</ion-grid>
                 <ul class="list dark">
-                    <li ng-if="showMyCourses" class="mm-mycourses-handler">
-
-                    </li>
                     <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
                         <ion-spinner></ion-spinner>
                     </li>
                     <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler {{class}}">
-                        <a class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}" ng-class="{'item-icon-right': loading}">
-                            <i class="icon {{icon}}"></i> {{title | translate}}
-                            <span ng-show="!loading && badge" class="badge badge-positive">{{badge}}</span>
-                            <ion-spinner ng-if="loading" class="icon"></ion-spinner>
-                        </a>
+
                     </li>
                     <li ng-repeat="item in customItems" class="mm-sidemenu-customitem">
-                        <a ng-if="item.type != 'embedded'" class="item item-icon-left" ng-href="{{item.url}}" mm-link in-app="{{item.type == 'inappbrowser'}}" title="{{item.label}}">
-                            <i class="icon {{item.icon}}"></i>{{item.label}}
-                        </a>
+
                         <a ng-if="item.type == 'embedded'" class="item item-icon-left" ui-sref="site.iframe-view({title: item.label, url: item.url})" title="{{item.label}}">
                             <i class="icon {{item.icon}}"></i>{{item.label}}
                         </a>
