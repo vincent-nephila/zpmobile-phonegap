@@ -35,44 +35,6 @@
                   asasas
 					 </ion-col>
 				  </ion-row>
-				  <ion-row>
-				    <ion-col col-6>This column will take 6 columns</ion-col>
-				  </ion-row>
 				</ion-grid>
-                <ul class="list dark">
-                    <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
-                        <ion-spinner></ion-spinner>
-                    </li>
-                    <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler {{class}}">
-
-                    </li>
-                    <li ng-repeat="item in customItems" class="mm-sidemenu-customitem">
-
-                        <a ng-if="item.type == 'embedded'" class="item item-icon-left" ui-sref="site.iframe-view({title: item.label, url: item.url})" title="{{item.label}}">
-                            <i class="icon {{item.icon}}"></i>{{item.label}}
-                        </a>
-                    </li>
-                    <li ng-if="showWeb">
-                        <a class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
-                            <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
-                        </a>
-                    </li>
-                    <li ng-if="showHelp">
-                        <a class="item item-icon-left" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
-                            <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
-                        </a>
-                    </li>
-                    <li class="item item-divider"></li>
-                    <li>
-                        <a class="item item-icon-left" ui-sref="site.mm_settings" title="{{ 'mm.sidemenu.appsettings' | translate}}">
-                            <i class="icon ion-gear-b"></i>{{ 'mm.sidemenu.appsettings' | translate}}
-                        </a>
-                    </li>
-                    <li>
-                        <a class="item item-icon-left" ng-click="logout()" title="{{ 'mm.sidemenu.changesite' | translate}}">
-                            <i class="icon ion-log-out"></i>{{ logoutLabel | translate}}
-                        </a>
-                    </li>
-                </ul>
         </ion-content>
     </ion-view>
