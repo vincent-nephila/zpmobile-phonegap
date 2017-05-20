@@ -1,7 +1,7 @@
 <ion-view hide-nav-bar="true" hide-back-button="true">
 
 
-        <header>
+        <ion-header-bar>
             <div class="bar bar-header bar-side-menu">
                 <a mm-user-link userid="{{siteinfo.userid}}" class="item item-avatar item-icon-right full-image">
                     <img ng-src="{{siteinfo.userpictureurl}}" alt="{{ 'mm.core.pictureof' | translate:{$a: siteinfo.fullname} }}" role="presentation" mm-external-content>
@@ -10,7 +10,7 @@
                     <i class="icon ion-ios-arrow-right"></i>
                 </a>
             </div>
-        </header>
+        </ion-header-bar>
         <ion-content class="has-header">
                 <ul class="list dark">
                     <li ng-if="showMyCourses" class="mm-mycourses-handler">
