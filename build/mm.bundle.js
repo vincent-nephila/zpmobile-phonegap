@@ -14506,13 +14506,13 @@ angular.module('mm.core.login')
             var $mmaFrontpage = $mmAddonManager.get('$mmaFrontpage');
             if ($mmaFrontpage) {
                 return $mmaFrontpage.isFrontpageAvailable().then(function() {
-                    return $state.go('site.mm_course-section');
+                    return $state.go('site.mm_menupage');
                 }).catch(function() {
                     return $state.go('site.mm_menupage');
                 });
             }
         }
-        return $state.go('site.mm_courses');
+        return $state.go('site.mm_menupage');
     };
         self.isFixedUrlSet = function() {
         return !!mmCoreConfigConstants.siteurl;
