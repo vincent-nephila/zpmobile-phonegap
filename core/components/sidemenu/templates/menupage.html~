@@ -1,15 +1,17 @@
 <ion-view hide-nav-bar="true" hide-back-button="true">
 
 
-        <ion-header-bar>
+
+
+        <ion-content class="has-header">
+            <div class="bar bar-header bar-side-menu">
                 <a mm-user-link userid="{{siteinfo.userid}}" class="item item-avatar item-icon-right full-image">
                     <img ng-src="{{siteinfo.userpictureurl}}" alt="{{ 'mm.core.pictureof' | translate:{$a: siteinfo.fullname} }}" role="presentation" mm-external-content>
                     <h2>{{siteinfo.fullname}}</h2>
                     <p><mm-format-text watch="true">{{siteinfo.sitename}}</mm-format-text></p>
                     <i class="icon ion-ios-arrow-right"></i>
                 </a>
-        </ion-header-bar>
-        <ion-content class="has-header">
+            </div>
                 <ul class="list dark">
                     <li ng-if="showMyCourses" class="mm-mycourses-handler">
                         <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
