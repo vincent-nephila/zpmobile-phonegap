@@ -1,4 +1,7 @@
 <ion-view view-title="{{ 'mm.courses.mycourses' | translate }}">
+   <ion-nav-buttons side="left">
+       <a class="button button-icon icon ion-navicon" ui-sref="site.mm_menupage"></a>
+   </ion-nav-buttons>
     <ion-nav-buttons side="secondary">
         <a ui-sref="site.mm_searchcourses" ng-if="searchEnabled" class="button button-icon ion-ios-search-strong"></a>
     </ion-nav-buttons>
