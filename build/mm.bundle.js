@@ -14508,7 +14508,7 @@ angular.module('mm.core.login')
                 return $mmaFrontpage.isFrontpageAvailable().then(function() {
                     return $state.go('site.mm_course-section');
                 }).catch(function() {
-                    return $state.go('site.mm_courses');
+                    return $state.go('site.mm_menupage');
                 });
             }
         }
