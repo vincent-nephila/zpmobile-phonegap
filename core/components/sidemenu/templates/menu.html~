@@ -17,11 +17,6 @@
         <ion-content class="has-side-menu-header mm-sidemenu-menu">
             <nav>
                 <ul class="list dark">
-                    <li ng-if="showMyCourses" class="mm-mycourses-handler">
-                        <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
-                            <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
-                        </a>
-                    </li>
                     <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
                         <ion-spinner></ion-spinner>
                     </li>
@@ -59,6 +54,11 @@
                     <li>
                         <a class="item item-icon-left" ng-click="logout()" title="{{ 'mm.sidemenu.changesite' | translate}}">
                             <i class="icon ion-log-out"></i>{{ logoutLabel | translate}}
+                        </a>
+                    </li>
+                    <li >
+                        <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
+                            <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
                         </a>
                     </li>
                 </ul>
