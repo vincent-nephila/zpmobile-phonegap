@@ -5056,7 +5056,7 @@ a.item-content {
 	align-items: center;
 }  
 .item-icon-menu p{
-	font-size: 12px;
+	font-size: 18px;
 	text-align: center;
 }
 
