@@ -5050,8 +5050,9 @@ a.item-content {
 .item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon-accessory {
   right: 3px; }
 
-.item-icon-menu {
-	font-size: 20px;
+.item-icon-menu i{
+	margin-left: auto;
+	margin-right: auto;
 	align-items: center;
 }  
 .item-icon-menu p{
