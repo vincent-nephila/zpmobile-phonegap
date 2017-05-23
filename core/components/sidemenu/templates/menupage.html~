@@ -30,7 +30,7 @@
 			   <div class="col">
                <a class="item item-icon-left" ui-sref="site.notifications" title="{{ 'mma.calendar.notifications' | translate}}">
                    <i class="icon ion-ios-bell"></i>
-                   {{ 'mma.calendar.notifications | translate}}
+                   {{ 'mma.calendar.notifications' | translate}}
                </a>	 
 			   </div>
 			</div>
