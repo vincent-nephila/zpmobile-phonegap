@@ -5049,9 +5049,13 @@ a.item-content {
 
 .item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon-accessory {
   right: 3px; }
-  
+
+.item-icon-menu {
+	align-items: center;
+}  
 .item-icon-menu p{
 	font-size: 12px;
+	text-align: center;
 }
 
 /**
