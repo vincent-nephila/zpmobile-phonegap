@@ -14,21 +14,21 @@
         <ion-content class="has-side-menu-header">
 			<div class = "row" style="">
 			   <div class = "col">
-               <a class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
                    <i class="icon ion-ionic"></i>
                    {{ 'mm.sidemenu.mycourses' | translate}}
                </a>
 			   </div>
 			   
 			   <div class="col">
-               <a class="item item-icon-left" ui-sref="site.coursesgrades" title="{{ 'mma.grades.grade' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.coursesgrades" title="{{ 'mma.grades.grade' | translate}}">
                    <i class="icon ion-stats-bar"></i>
                    {{ 'mma.grades.grade' | translate}}
                </a>	   
 			   </div>
 			   
 			   <div class="col">
-               <a class="item item-icon-left" ui-sref="site.notifications" title="{{ 'mma.calendar.notifications' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.notifications" title="{{ 'mma.calendar.notifications' | translate}}">
                    <i class="icon ion-ios-bell"></i>
                    {{ 'mma.calendar.notifications' | translate}}
                </a>	 
@@ -37,21 +37,21 @@
 			
 			<div class = "row">
 			   <div class="col">
-               <a class="item item-icon-left" ui-sref="site.messages" title="{{ 'mma.messages.messages' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.messages" title="{{ 'mma.messages.messages' | translate}}">
                    <i class="icon ion-chatbox"></i>
                    {{ 'mma.messages.messages' | translate}}
                </a>	 
 			   </div>
 			   
 			   <div class="col">
-               <a class="item item-icon-left" ui-sref="site.calendar" title="{{ 'mma.calendar.calendarevents' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.calendar" title="{{ 'mma.calendar.calendarevents' | translate}}">
                    <i class="icon ion-calendar"></i>
                    {{ 'mma.calendar.calendarevents' | translate}}
                </a>	 
 			   </div>
 			   
 			   <div class="col">
-               <a class="item item-icon-left" ui-sref="site.files" title="{{ 'mma.files.myfiles' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.files" title="{{ 'mma.files.myfiles' | translate}}">
                    <i class="icon ion-folder"></i>
                    {{ 'mma.files.myfiles' | translate}}
                </a>	 
@@ -60,17 +60,17 @@
 						
 			<div class="row">
 			   <div class = "col">
-               <a class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
+               <a class="item item-icon-menu" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
                    <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
                </a>			   
 			   </div>
 			   <div class = "col">
-               <a class="item item-icon-left" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
+               <a class="item item-icon-menu" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
                    <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
                </a>
 			   </div>
 			   <div class = "col">
-               <a class="item item-icon-left" ui-sref="site.mm_settings" title="{{ 'mm.sidemenu.appsettings' | translate}}">
+               <a class="item item-icon-menu" ui-sref="site.mm_settings" title="{{ 'mm.sidemenu.appsettings' | translate}}">
                    <i class="icon ion-gear-b"></i>{{ 'mm.sidemenu.appsettings' | translate}}
                </a>
 			   </div>
