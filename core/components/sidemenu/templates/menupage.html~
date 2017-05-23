@@ -15,7 +15,7 @@
 			<div class = "row" style="">
 			   <div class = "col">
                <a class="item item-icon-menu" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
-                   <p><i class="icon ion-ionic"></i>
+                   <p class="picon"><i class="icon ion-ionic"></i>
                    <p>{{ 'mm.sidemenu.mycourses' | translate}}</p>
                </a>
 			   </div>
