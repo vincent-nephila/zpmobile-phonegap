@@ -5049,6 +5049,10 @@ a.item-content {
 
 .item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon-accessory {
   right: 3px; }
+  
+.item-icon-menu{
+	font-size: 10px;
+}
 
 /**
  * Item Button
@@ -8389,7 +8393,7 @@ a.button {
   bottom: 0; }
 
 .mm-logo {
-  background-image: url('../img/zphar.png');
+  background-image: url('../img/zphar_spash.png');
   /* Change logo here */
   background-repeat: no-repeat;
   background-position: center center;
