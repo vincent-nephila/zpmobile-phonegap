@@ -22,14 +22,14 @@
 			   
 			   <div class="col">
                <a class="item item-icon-menu" ui-sref="site.coursesgrades" title="{{ 'mma.grades.grade' | translate}}">
-                   <p><i class="icon ion-stats-bars"></i></p>
+                   <p class="picon"><i class="icon ion-stats-bars"></i></p>
                    <p>{{ 'mma.grades.grade' | translate}}</p>
                </a>	   
 			   </div>
 			   
 			   <div class="col">
                <a class="item item-icon-menu" ui-sref="site.notifications" title="{{ 'mma.calendar.notifications' | translate}}">
-                   <p><i class="icon ion-ios-bell"></i></p>
+                   <p class="picon"><i class="icon ion-ios-bell"></i></p>
                    <p>{{ 'mma.calendar.notifications' | translate}}</p>
                </a>	 
 			   </div>
@@ -38,21 +38,21 @@
 			<div class = "row">
 			   <div class="col">
                <a class="item item-icon-menu" ui-sref="site.messages" title="{{ 'mma.messages.messages' | translate}}">
-                   <p><i class="icon ion-chatbox"></i></p>
+                   <p class="picon"><i class="icon ion-chatbox"></i></p>
                    <p>{{ 'mma.messages.messages' | translate}}</p>
                </a>	 
 			   </div>
 			   
 			   <div class="col">
                <a class="item item-icon-menu" ui-sref="site.calendar" title="{{ 'mma.calendar.calendarevents' | translate}}">
-                   <p><i class="icon ion-calendar"></i></p>
+                   <p class="picon"><i class="icon ion-calendar"></i></p>
                    <p>{{ 'mma.calendar.calendarevents' | translate}}</p>
                </a>	 
 			   </div>
 			   
 			   <div class="col">
                <a class="item item-icon-menu" ui-sref="site.files" title="{{ 'mma.files.myfiles' | translate}}">
-                   <p><i class="icon ion-folder"></i></p>
+                   <p class="picon"><i class="icon ion-folder"></i></p>
                    <p>{{ 'mma.files.myfiles' | translate}}</p>
                </a>	 
 			   </div>
@@ -61,19 +61,19 @@
 			<div class="row">
 			   <div class = "col">
                <a class="item item-icon-menu" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
-                   <p><i class="icon ion-earth"></i></p>
+                   <p class="picon"><i class="icon ion-earth"></i></p>
                    <p>{{ 'mm.sidemenu.website' | translate}}</p>
                </a>			   
 			   </div>
 			   <div class = "col">
                <a class="item item-icon-menu" ng-href="{{docsurl}}" mm-link auto-login="no" title="{{ 'mm.sidemenu.help' | translate}}">
-                   <p><i class="icon ion-help-buoy"></i></p>
+                   <p class="picon"><i class="icon ion-help-buoy"></i></p>
                    <p>{{ 'mm.sidemenu.help' | translate}}</p>
                </a>
 			   </div>
 			   <div class = "col">
                <a class="item item-icon-menu" ui-sref="site.mm_settings" title="{{ 'mm.sidemenu.appsettings' | translate}}">
-                   <p><i class="icon ion-gear-b"></i></p>
+                   <p class="picon"><i class="icon ion-gear-b"></i></p>
                    <p>{{ 'mm.sidemenu.appsettings' | translate}}</p>
                </a>
 			   </div>
