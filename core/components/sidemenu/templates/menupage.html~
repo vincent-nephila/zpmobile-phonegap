@@ -45,12 +45,21 @@
 			   </div>
 			   
 			   <div class="col">
-               <a class="item item-icon-left" ui-sref="site.messages" title="{{ 'mma.calendar.calendarevents' | translate}}">
+               <a class="item item-icon-left" ui-sref="site.calendar" title="{{ 'mma.calendar.calendarevents' | translate}}">
                    <i class="icon ion-calendar"></i>
                    {{ 'mma.calendar.calendarevents | translate}}
                </a>	 
 			   </div>
 			   
+			   <div class="col">
+               <a class="item item-icon-left" ui-sref="site.files" title="{{ 'mma.files.myfiles' | translate}}">
+                   <i class="icon ion-folder"></i>
+                   {{ 'mma.files.myfiles | translate}}
+               </a>	 
+			   </div>
+			</div>
+			
+			<div class="row">
 			   <div class = "col">
                <a class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link auto-login="yes" title="{{ 'mm.sidemenu.website' | translate}}">
                    <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
@@ -66,6 +75,7 @@
                    <i class="icon ion-gear-b"></i>{{ 'mm.sidemenu.appsettings' | translate}}
                </a>
 			   </div>
+
 			</div>
         </ion-content>
     </ion-view>
